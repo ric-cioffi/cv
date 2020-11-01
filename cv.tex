@@ -22,24 +22,31 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 \usepackage[dvipsnames]{xcolor}
+\definecolor{princeton_orange}{HTML}{E77500}
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.1in]{geometry} % Document margins
+\usepackage[colorlinks=true, urlcolor=princeton_orange]{hyperref}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.75in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+% \usepackage{bold-extra}
+\usepackage[T1]{fontenc}
+
+
 \name{Riccardo Antonio Cioffi} % Your name
-% \address{Julio Romo Rabinowitz Building \\ }
-\address{Department of Economics, JRRB - Princeton University \\ Princeton, NJ 08540} % 
-% \address{JRR Building - Department of Economics, Princeton University \\ Princeton, NJ 08540} % Your address
-%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-% \address{github: loisks317 \\ blog: loisks.blogspot.com}
-\address{+1 (929) 312-1710 \\ rcioffi@princeton.edu} % Your phone number and email
+\address{Department of Economics, JRRB \\ Princeton University -- Princeton, NJ 08540} % 
+\address{\href{mailto:rcioffi@princeton.edu}{rcioffi@princeton.edu} \\ %
+         \href{https://www.rcioffi.com}{rcioffi.com} \\ %
+         +1 (929) 312-1710} % Your phone number and email
+
 
 
 \renewenvironment{rSection}[1]{
 \sectionskip
-\textcolor[HTML]{e77500}{\textsc{#1}}
+\Large{\textsc{#1}}
+\normalsize
 \sectionlineskip
-\hrule
+\hrule height 1pt
 \begin{list}{}{
 \setlength{\leftmargin}{1.5em}
 }
@@ -59,22 +66,89 @@
 \begin{rSection}{Education}
 
 
-{\bf Princeton University} \hfill {\em 2015 -- Present} 
-\\ Ph.D. in Economics \hfill
+{\bf Ph.D. in Economics} \hfill {\em 2015 -- Present} 
+\\ Princeton University \hfill
 \\ General Examinations: Macroeconomics, International Macroeconomics \hfill
 
-{\bf Princeton University} \hfill {\em 2017} 
-\\ M.A. in Economics \hfill
+{\bf M.A. in Economics} \hfill {\em 2017} 
+\\ Princeton University \hfill
 
-{\bf University of Naples Federico II} \hfill {\em 2014} 
-\\ M.A. in Economics and Finance \hfill
+{\bf M.A. in Economics and Finance} \hfill {\em 2014} 
+\\ University of Naples Federico II \hfill
 
-{\bf University of Naples Federico II} \hfill {\em 2012} 
-\\ B.A. in Economics \hfill
+{\bf B.A. in Economics} \hfill {\em 2012} 
+\\ University of Naples Federico II \hfill
 
 %Minor in Linguistics \smallskip \\
 %Member of Eta Kappa Nu \\
 %Member of Upsilon Pi Epsilon \\
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   Research Interests
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Fields}
+
+Macroeconomics, Finance, Household Finance, Inequality
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   Working Papers
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Working papers}
+
+{Wealth Inequality and Portfolio Choice: Housing is Necessary}\hfill {\em Job Market Paper}
+
+{Wealth Inequality at the Top: Down to the Roots}\hfill {}
+% \end{rSection}
+
+% %----------------------------------------------------------------------------------------
+% %   Work in progress
+% %----------------------------------------------------------------------------------------
+
+% \begin{rSection}{Work in progress}
+
+{Wealth Inequality and Asset Returns: the Role of Heterogeneous Exposure to Aggregate Risk(s)}\hfill {}
+
+{The Direct Effect of Wealth on Portfolio Choice: Evidence from Norway}\hfill {}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Other Professional Positions}
+
+{Research Assistant to Gianluca Violante} \hfill {\em Princeton University, 2018 -- 2019}
+
+{Research Assistant to Benjamin Moll} \hfill {\em Princeton University, 2016 -- 2018}
+
+{Research Assistant to Oleg Itskhoki} \hfill {\em Princeton University, 2016}
+
+{Research Assistant to Marco Pagano} \hfill {\em University of Naples, 2014 -- 2015}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   TEACHING EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Teaching}
+
+{\bf High Performance Computing in Economics -- Graduate} \hfill {\bf Princeton University} \\
+{Instructor} \hfill {\em Summer 2019} \\
+{Instructor} \hfill {\em Fall 2020}
+
+{\bf Intermediate Macroeconomics -- Undergraduate} \hfill {\bf Princeton University} \\
+{T.A. for Gianluca Violante} \hfill {\em Spring 2018} 
+
+{\bf Introductory Microeconomics -- Undergraduate} \hfill {\bf Princeton University} \\
+{T.A. for Harvey Rosen} \hfill {\em Fall 2018} \\
+{T.A. for Henry Farber} \hfill {\em Fall 2017} 
 
 \end{rSection}
 
@@ -90,31 +164,9 @@
 {\bf Capital Markets Cooperative Research Centre} \hfill {\bf Sydney, Australia}
 \\ Visiting Scholar \hfill {\em Spring 2015}
 
-{\bf Goethe University} \hfill {\bf Frankfurt, Germany}
-\\ Erasmus Exchange Student \hfill {\em Fall 2013}
+% {\bf Goethe University} \hfill {\bf Frankfurt, Germany}
+% \\ Erasmus Exchange Student \hfill {\em Fall 2013}
 
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%   Working Papers
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Working papers}
-
-{Wealth Inequality and Portfolio Choice: Housing is Necessary}\hfill {\em Job Market Paper} \\
-
-{Wealth Inequality at the Top: Down to the Roots}\hfill {}
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%   Work in progress
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Work in progress}
-
-{Wealth Inequality and Asset Returns: the Role of Heterogeneous Exposure to Aggregate Risk(s)}\hfill {} \\
-
-{The Direct Effect of Wealth on Portfolio Choice: Evidence from Norway}\hfill {}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -129,56 +181,6 @@
 {``Messaggeri della Conoscenza'' Program Scholarship}\hfill {\em 2015} \\
 {Best Master Student -- University of Naples} \hfill {\em 2014}
 \end{rSection}
-\newpage 
-
-%----------------------------------------------------------------------------------------
-%   RESEARCH EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Research Experience}
-
-{\bf Research Assistant to Gianluca Violante} \hfill {\em 2018 -- 2019} \\
-Princeton University
-
-{\bf Research Assistant to Benjamin Moll} \hfill {\em 2016 -- 2018} \\
-Princeton University
-
-{\bf Research Assistant to Oleg Itskhoki} \hfill {\em 2016} \\
-Princeton University
-
-{\bf Research Assistant to Marco Pagano} \hfill {\em 2014 -- 2015} \\
-University of Naples
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%   TEACHING EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Teaching Experience}
-
-{\bf High Performance Computing in Economics -- Graduate} \hfill {\bf Princeton University} \\
-{Instructor} \hfill {\em Summer 2019}
-{} \hfill {\em Fall 2020}
-
-{\bf Intermediate Macroeconomics -- Undergraduate} \hfill {\bf Princeton University} \\
-{T.A. for Professor Gianluca Violante} \hfill {\em Spring 2018} 
-
-{\bf Introductory Microeconomics -- Undergraduate} \hfill {\bf Princeton University} \\
-{T.A. for Professor Harvey Rosen} \hfill {\em Fall 2018} \\
-{T.A. for Professor Henry Farber} \hfill {\em Fall 2017} 
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%   Research Interests
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Research Interests}
-
-Macroeconomics, Finance, Household Finance, Inequality
-
-\end{rSection}
 
 
 %----------------------------------------------------------------------------------------
@@ -191,6 +193,16 @@ Matlab, Julia, R, Stata, SAS, \LaTeX
 
 \end{rSection}
 
+
+%----------------------------------------------------------------------------------------
+%   LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Languages}
+
+Italian (native), English
+
+\end{rSection}
 
 
 
