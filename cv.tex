@@ -1,3 +1,5 @@
+%!TeX program = xelatex
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Medium Length Professional CV
 % LaTeX Template
@@ -22,31 +24,46 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 \usepackage[dvipsnames]{xcolor}
-\definecolor{princeton_orange}{HTML}{E77500}
+\definecolor{accent_light}{Hsb}{220, 0.95, 0.9}
+\definecolor{accent_dark}{Hsb}{220, 1, 0.25}
 
-\usepackage[colorlinks=true, urlcolor=princeton_orange]{hyperref}
+\usepackage[colorlinks=true, urlcolor=accent_light]{hyperref}
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.75in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
 % \usepackage{bold-extra}
 \usepackage[T1]{fontenc}
+\usepackage{fontspec}
+
+\setmainfont{Montserrat ExtraLight}[BoldFont = Montserrat Regular]
+\newfontfamily\scdfamily{Cinzel Decorative}[BoldFont = CinzelDecorative-Bold]
+
+\newfontfamily\scfamily{Cinzel}[
+    FontFace = {sb}{n}{Font = * SemiBold}
+    ]
+
+\newcommand\cinzel[1]{{\scfamily #1}}
+\newcommand\cinzeldeco[1]{{\scdfamily #1}}
+
+\DeclareRobustCommand{\sbseries}{\fontseries{sb}\selectfont}
+\DeclareTextFontCommand{\textsb}{\sbseries}
 
 
-\name{Riccardo Antonio Cioffi} % Your name
-\address{Department of Economics, JRRB \\ Princeton University -- Princeton, NJ 08540} % 
+\name{\color{accent_dark}\Huge\bfseries\cinzel{\cinzeldeco{R}iccardo \cinzeldeco{A}ntonio \cinzeldeco{C}ioffi}} % Your name
 \address{\href{mailto:rcioffi@princeton.edu}{rcioffi@princeton.edu} \\ %
-         \href{https://www.rcioffi.com}{rcioffi.com} \\ %
-         +1 (929) 312-1710} % Your phone number and email
+         % \href{https://www.rcioffi.com}{rcioffi.com} \\ %
+         \href{tel:+19293121710}{+1 (929) 312-1710}} % Your phone number and email
+\address{Department of Economics, JRRB \\ Princeton University -- Princeton, NJ 08540} % 
 
 
 
 \renewenvironment{rSection}[1]{
 \sectionskip
-\Large{\textsc{#1}}
+{\color{accent_dark}\textsb{\cinzel{\Large{\textsc{#1}}}}}
 \normalsize
 \sectionlineskip
-\hrule height 1pt
+{\color{accent_dark}\vspace{-2.5pt}\hrule height 1.5pt}
 \begin{list}{}{
 \setlength{\leftmargin}{1.5em}
 }
@@ -54,7 +71,6 @@
 }{
 \end{list}
 }
-
 
 
 \begin{document}
@@ -66,24 +82,24 @@
 \begin{rSection}{Education}
 
 
-{\bf Ph.D. in Economics} \hfill {\em 2015 -- Present} 
+{{\sc \textbf{Ph.D. in Economics}} \hfill {\em 2015 -- Present} 
 \\ Princeton University \hfill
-\\ General Examinations: Macroeconomics, International Macroeconomics \hfill
-
-{\bf M.A. in Economics} \hfill {\em 2017} 
-\\ Princeton University \hfill
-
-{\bf M.A. in Economics and Finance} \hfill {\em 2014} 
-\\ University of Naples Federico II \hfill
-
-{\bf B.A. in Economics} \hfill {\em 2012} 
-\\ University of Naples Federico II \hfill
+\\ General Examinations: Macroeconomics, International Macroeconomics \hfill} \\[0.25ex]
+%
+{{\sc \textbf{M.A. in Economics}} \hfill {\em 2017} 
+\\ Princeton University \hfill} \\[0.25ex]
+%
+{{\sc \textbf{M.A. in Economics and Finance}} \hfill {\em 2014} 
+\\ University of Naples Federico II \hfill} \\[0.25ex]
+%
+{{\sc \textbf{B.A. in Economics}} \hfill {\em 2012} 
+\\ University of Naples Federico II \hfill}
 
 %Minor in Linguistics \smallskip \\
 %Member of Eta Kappa Nu \\
 %Member of Upsilon Pi Epsilon \\
 
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
 %   Research Interests
@@ -93,7 +109,7 @@
 
 Macroeconomics, Finance, Household Finance, Inequality
 
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
 %   Working Papers
@@ -101,37 +117,34 @@ Macroeconomics, Finance, Household Finance, Inequality
 
 \begin{rSection}{Working papers}
 
-{Wealth Inequality and Portfolio Choice: Housing is Necessary}\hfill {\em Job Market Paper}
+{Wealth Inequality, Portfolio Choice, and Asset Returns}\hfill {\em Job Market Paper}
 
 {Wealth Inequality at the Top: Down to the Roots}\hfill {}
-% \end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 % %----------------------------------------------------------------------------------------
 % %   Work in progress
 % %----------------------------------------------------------------------------------------
 
-% \begin{rSection}{Work in progress}
+\begin{rSection}{Work in progress}
 
-{Wealth Inequality and Asset Returns: the Role of Heterogeneous Exposure to Aggregate Risk(s)}\hfill {}
+% {Wealth Inequality and Asset Returns: the Role of Heterogeneous Exposure to Aggregate Risk(s)}\hfill {}
 
 {The Direct Effect of Wealth on Portfolio Choice: Evidence from Norway}\hfill {}
-\end{rSection}
+\end{rSection}\vspace*{-2ex}
 
 %----------------------------------------------------------------------------------------
 %   RESEARCH EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Other Professional Positions}
+\begin{rSection}{Other Professional Positions} \itemsep - 2pt
 
-{Research Assistant to Gianluca Violante} \hfill {\em Princeton University, 2018 -- 2019}
-
-{Research Assistant to Benjamin Moll} \hfill {\em Princeton University, 2016 -- 2018}
-
-{Research Assistant to Oleg Itskhoki} \hfill {\em Princeton University, 2016}
-
+{Research Assistant to Gianluca Violante} \hfill {\em Princeton University, 2018 -- 2019} \\
+{Research Assistant to Benjamin Moll} \hfill {\em Princeton University, 2016 -- 2018} \\
+{Research Assistant to Oleg Itskhoki} \hfill {\em Princeton University, 2016} \\
 {Research Assistant to Marco Pagano} \hfill {\em University of Naples, 2014 -- 2015}
 
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
 %   TEACHING EXPERIENCE SECTION
@@ -139,18 +152,18 @@ Macroeconomics, Finance, Household Finance, Inequality
 
 \begin{rSection}{Teaching}
 
-{\bf High Performance Computing in Economics -- Graduate} \hfill {\bf Princeton University} \\
+{{\sc \textbf{Graduate -- High Performance Computing in Economics}} \\
 {Instructor} \hfill {\em Summer 2019} \\
-{Instructor} \hfill {\em Fall 2020}
-
-{\bf Intermediate Macroeconomics -- Undergraduate} \hfill {\bf Princeton University} \\
-{T.A. for Gianluca Violante} \hfill {\em Spring 2018} 
-
-{\bf Introductory Microeconomics -- Undergraduate} \hfill {\bf Princeton University} \\
+{Instructor} \hfill {\em Fall 2020}}\\[0.25ex]
+%
+{{\sc \textbf{Undergraduate -- Intermediate Macroeconomics}} \\
+{T.A. for Gianluca Violante} \hfill {\em Spring 2018}}\\[0.25ex]
+%
+{{\sc \textbf{Undergraduate -- Introductory Microeconomics}} \\
 {T.A. for Harvey Rosen} \hfill {\em Fall 2018} \\
-{T.A. for Henry Farber} \hfill {\em Fall 2017} 
+{T.A. for Henry Farber} \hfill {\em Fall 2017}}
 
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
 %   VISITING SECTION
@@ -158,16 +171,16 @@ Macroeconomics, Finance, Household Finance, Inequality
 
 \begin{rSection}{Visiting Positions}
 
-{\bf Statistics Norway} \hfill {\bf Oslo, Norway}
-\\ Visiting Scholar \hfill {\em 2018 -- Present}
-
-{\bf Capital Markets Cooperative Research Centre} \hfill {\bf Sydney, Australia}
+{{\sc \textbf{Statistics Norway}} \hfill {\sc \textbf{Oslo, Norway}}
+\\ Visiting Scholar \hfill {\em 2018 -- Present}}\\[0.25ex]
+%
+{\sc \textbf{Capital Markets Cooperative Research Centre}} \hfill {\sc \textbf{Sydney, Australia}}
 \\ Visiting Scholar \hfill {\em Spring 2015}
 
 % {\bf Goethe University} \hfill {\bf Frankfurt, Germany}
 % \\ Erasmus Exchange Student \hfill {\em Fall 2013}
 
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
 %   HONORS AND AWARDS
@@ -180,7 +193,7 @@ Macroeconomics, Finance, Household Finance, Inequality
 {Marco Fanno Scholarship -- UniCredit \& Universities Foundation}\hfill {\em 2014 - 2015} \\
 {``Messaggeri della Conoscenza'' Program Scholarship}\hfill {\em 2015} \\
 {Best Master Student -- University of Naples} \hfill {\em 2014}
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 
 %----------------------------------------------------------------------------------------
@@ -189,9 +202,9 @@ Macroeconomics, Finance, Household Finance, Inequality
 
 \begin{rSection}{Programming Skills}
 
-Matlab, Julia, R, Stata, SAS, \LaTeX
+Julia, R, Matlab, Stata, SAS, \LaTeX
 
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 
 %----------------------------------------------------------------------------------------
@@ -202,7 +215,7 @@ Matlab, Julia, R, Stata, SAS, \LaTeX
 
 Italian (native), English
 
-\end{rSection}
+\end{rSection}\vspace*{-1.5ex}
 
 
 
