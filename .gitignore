@@ -1,4 +1,5 @@
 *.DS_Store
 /cv.pdf
 /cv.sublime-project
+/.gitignore
 /cv.sublime-workspace
