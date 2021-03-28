@@ -25,12 +25,15 @@
 \documentclass{resume} % Use the custom resume.cls style
 \usepackage[dvipsnames]{xcolor}
 \definecolor{accent_light}{Hsb}{220, 0.95, 0.9}
-\definecolor{accent_dark}{Hsb}{220, 1, 0.25}
+\definecolor{accent_dark}{Hsb}{220, 0.95, 0.3}
 
 \usepackage[colorlinks=true, urlcolor=accent_light]{hyperref}
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.75in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\usepackage{changepage} % To add indent to abstracts
+\renewenvironment{abstract}{\begin{adjustwidth}{1em}{}}{\end{adjustwidth}}
 
 % \usepackage{bold-extra}
 \usepackage[T1]{fontenc}
@@ -50,10 +53,11 @@
 \DeclareTextFontCommand{\textsb}{\sbseries}
 
 
-\name{\color{accent_dark}\Huge\bfseries\cinzel{\cinzeldeco{R}iccardo \cinzeldeco{A}ntonio \cinzeldeco{C}ioffi}} % Your name
-\address{\href{mailto:rcioffi@princeton.edu}{rcioffi@princeton.edu} \\ %
+\name{\color{accent_dark}\fontsize{32}{1}\bfseries\cinzel{\fontsize{36}{1}{\cinzeldeco{R}}iccardo \cinzeldeco{A}ntonio \cinzeldeco{C}ioffi}} % Your name
+\address{\href{https://www.rcioffi.com}{rcioffi.com} \\ %
+         \href{mailto:rcioffi@princeton.edu}{rcioffi@princeton.edu} \\ %
          % \href{https://www.rcioffi.com}{rcioffi.com} \\ %
-         \href{tel:+19293121710}{+1 (929) 312-1710}} % Your phone number and email
+         \href{tel:+16094235568}{+1 (609) 423-5568}} % Your phone number and email
 \address{Department of Economics, JRRB \\ Princeton University -- Princeton, NJ 08540} % 
 
 
@@ -101,6 +105,43 @@
 \end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
+%   Working Papers
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Working Papers}
+
+{\sc \textbf{Wealth Inequality, Asset Returns, and Portfolio Choice}}\hfill {\footnotesize \em \textbf{Job Market Paper}} \\[-1.5em]
+{\begin{abstract}
+    \footnotesize 
+    In this paper I show that, to generate large wealth dispersion, it suffices to have a model consistent with households' portfolio choice along the wealth distribution coupled with realistic features for asset returns.
+    Then, I propose a model where -- just like in the data -- as households get wealthier they shift their portfolios away from safe assets, first towards housing, and then towards equity.
+    Because they depend on the exposure of households' portfolios to different risk sources, returns to total wealth vary along the wealth distribution allowing me to match both the level of wealth inequality and its comovement with asset prices.
+    Importantly, I also show that to generate portfolio shares in line with the data it is crucial to consider the dual role of housing as a (risky) investment and a necessary good.
+    Finally, I close the model in general equilibrium and look at how the introduction of such GE feedback between wealth inequality and asset prices changes our understanding of policy.
+\end{abstract}}
+\vspace*{0.5em}
+{\sc \textbf{Wealth Inequality at the Top: Down to the Roots}} \hfill {\footnotesize \em (joint with G. Sorg-Langhans and M. Vogler)}} \\[-1.5em]
+{\begin{abstract}
+    \footnotesize
+    Multiple theories of inequality compete to explain U.S. wealth inequality and the share of wealth held by the top one percent. To what extent does it matter which of these models we rely on? In this paper we analyze the responses of the different theories to a host of policy experiments. 
+    To this end, we form a quantitative model that nests the competing channels and assesses the effects of policy experiments by sequentially shutting off all but one of these model mechanisms. Our model is calibrated on the wealth distribution which allows us to starkly contrast the different theories and clearly understand the mechanisms at work. Our policy exercises allow us to compare the competing models against empirical estimates from Jakobsen et al. (2020) and lead us to conclude that heterogeneous returns is the most important cause of increased wealth inequality. Understanding this dominant channel is crucial for both policy considerations and academic modeling.
+\end{abstract}}
+\vspace*{0.5em}
+
+\end{rSection}\vspace*{-1.5ex}
+
+% %----------------------------------------------------------------------------------------
+% %   Work in progress
+% %----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work in Progress}
+
+% {Wealth Inequality and Asset Returns: the Role of Heterogeneous Exposure to Aggregate Risk(s)}\hfill {}
+
+{\sc \textbf{The Direct Effect of Wealth on Portfolio Choice: Evidence from Norway}}\hfill {}
+\end{rSection}\vspace*{-2ex}
+
+%----------------------------------------------------------------------------------------
 %   Research Interests
 %----------------------------------------------------------------------------------------
 
@@ -111,66 +152,14 @@ Macroeconomics, Finance, Household Finance, Inequality
 \end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
-%   Working Papers
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Working papers}
-
-{Wealth Inequality, Portfolio Choice, and Asset Returns}\hfill {\em Job Market Paper}
-
-{{Wealth Inequality at the Top: Down to the Roots} \\
-\emph{(joint with G. Sorg-Langhans and M. Vogler)}}
-\end{rSection}\vspace*{-1.5ex}
-
-% %----------------------------------------------------------------------------------------
-% %   Work in progress
-% %----------------------------------------------------------------------------------------
-
-\begin{rSection}{Work in progress}
-
-% {Wealth Inequality and Asset Returns: the Role of Heterogeneous Exposure to Aggregate Risk(s)}\hfill {}
-
-{The Direct Effect of Wealth on Portfolio Choice: Evidence from Norway}\hfill {}
-\end{rSection}\vspace*{-2ex}
-
-%----------------------------------------------------------------------------------------
-%   RESEARCH EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Other Professional Positions} \itemsep - 2pt
-
-{Research Assistant to Gianluca Violante} \hfill {\em Princeton University, 2018 -- 2019} \\
-{Research Assistant to Benjamin Moll} \hfill {\em Princeton University, 2016 -- 2018} \\
-{Research Assistant to Oleg Itskhoki} \hfill {\em Princeton University, 2016} \\
-{Research Assistant to Marco Pagano} \hfill {\em University of Naples, 2014 -- 2015}
-
-\end{rSection}\vspace*{-1.5ex}
-
-%----------------------------------------------------------------------------------------
-%   TEACHING EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Teaching}
-
-{{\sc \textbf{Graduate -- High Performance Computing in Economics}} \\
-{Instructor} \hfill {\em Fall 2020}} \\
-{Instructor} \hfill {\em Summer 2019} \\[0.25ex]
-%
-{{\sc \textbf{Undergraduate -- Intermediate Macroeconomics}} \\
-{T.A. for Gianluca Violante} \hfill {\em Spring 2018}}\\[0.25ex]
-%
-{{\sc \textbf{Undergraduate -- Introductory Microeconomics}} \\
-{T.A. for Harvey Rosen} \hfill {\em Fall 2018} \\
-{T.A. for Henry Farber} \hfill {\em Fall 2017}}
-
-\end{rSection}\vspace*{-1.5ex}
-
-%----------------------------------------------------------------------------------------
 %   VISITING SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Visiting Positions}
 
+{{\sc \textbf{Federal Reserve Bank of St. Louis}} \hfill {\sc \textbf{St. Louis, MO}}
+\\ Dissertation Intern (virtual workshop due to COVID-19) \hfill {\em Summer 2020}}\\[0.25ex]
+%
 {{\sc \textbf{Statistics Norway}} \hfill {\sc \textbf{Oslo, Norway}}
 \\ Visiting Scholar \hfill {\em 2018 -- Present}}\\[0.25ex]
 %
@@ -183,12 +172,43 @@ Macroeconomics, Finance, Household Finance, Inequality
 \end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
+%   TEACHING EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Teaching}
+
+{{\sc \textbf{Graduate -- High Performance Computing in Economics}} \\
+{Sole Instructor} \hfill {\em Fall 2020}} \\
+{Sole Instructor} \hfill {\em Summer 2019} \\[0.25ex]
+%
+{{\sc \textbf{Undergraduate -- Intermediate Macroeconomics}} \\
+{T.A. for Gianluca Violante} \hfill {\em Spring 2018}}\\[0.25ex]
+%
+{{\sc \textbf{Undergraduate -- Introductory Microeconomics}} \\
+{T.A. for Harvey Rosen} \hfill {\em Fall 2018} \\
+{T.A. for Henry Farber} \hfill {\em Fall 2017}}
+
+\end{rSection}\vspace*{-1.5ex}
+
+%----------------------------------------------------------------------------------------
+%   RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Research Activities} \itemsep - 2pt
+
+{R.A. -- Gianluca Violante} \hfill {\em Princeton University, 2018 -- 2019} \\
+{R.A. -- Benjamin Moll} \hfill {\em Princeton University, 2016 -- 2018} \\
+{R.A. -- Oleg Itskhoki} \hfill {\em Princeton University, 2016} \\
+{R.A. -- Marco Pagano} \hfill {\em University of Naples, 2014 -- 2015}
+
+\end{rSection}\vspace*{-1.5ex}
+
+%----------------------------------------------------------------------------------------
 %   HONORS AND AWARDS
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Honors and Awards} \itemsep -2pt
 
-{Dissertation Internship -- FRB of St. Louis (virtual workshop due to COVID-19)}\hfill {\em 2020} \\
 {Griswold Center for Economy Policy Studies Fellowship -- Princeton University}\hfill {\em 2019 - 2020} \\
 {Graduate Fellowship -- Princeton University}\hfill {\em 2015 - 2019} \\
 {Marco Fanno Scholarship -- UniCredit \& Universities Foundation}\hfill {\em 2014 - 2015} \\
