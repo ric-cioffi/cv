@@ -27,10 +27,16 @@
 \definecolor{accent_light}{Hsb}{220, 0.95, 0.9}
 \definecolor{accent_dark}{Hsb}{220, 0.95, 0.3}
 
+\usepackage[misc]{ifsym} % loads letter symbol
+\usepackage{fontawesome} % loads other symbols
+\usepackage{graphicx}    % for the \rotatebox command
+\usepackage{datetime}    % to adjust date format
+
 \usepackage[colorlinks=true, urlcolor=accent_light]{hyperref}
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.75in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\usepackage{multicol} % for multicolumn environment (references)
 
 \usepackage{changepage} % To add indent to abstracts
 \renewenvironment{abstract}{\begin{adjustwidth}{1em}{}}{\end{adjustwidth}}
@@ -53,13 +59,17 @@
 \DeclareTextFontCommand{\textsb}{\sbseries}
 
 
+\newdateformat{monthdayyeardate}{%
+  \monthname[\THEMONTH]~\THEDAY, \THEYEAR}
+
+% \renewcommand{\faPhone}{\rotatebox[origin=c]{50}{\faPhone}}
+
 % \name{\color{accent_dark}\fontsize{32}{1}\bfseries\cinzel{\fontsize{36}{1}{\cinzeldeco{R}}iccardo \cinzeldeco{A}ntonio \cinzeldeco{C}ioffi}} % Your name
-\name{\color{accent_dark}\fontsize{32}{1}\bfseries\cinzel{\fontsize{36}{1} Riccardo Antonio Cioffi}} % Your name
-\address{\href{https://www.rcioffi.com}{rcioffi.com} \\ %
-         \href{mailto:rcioffi@princeton.edu}{rcioffi@princeton.edu} \\ %
-         % \href{https://www.rcioffi.com}{rcioffi.com} \\ %
-         \href{tel:+16094235568}{+1 (609) 423-5568}} % Your phone number and email
-\address{Department of Economics, JRRB \\ Princeton University -- Princeton, NJ 08540} % 
+\name{\color{accent_dark}\fontsize{24}{1}\bfseries\cinzel{Riccardo Antonio Cioffi}} % Your name
+\address{\href{mailto:rcioffi@princeton.edu}{{\footnotesize{\Letter}} rcioffi@princeton.edu} \\ %
+         \href{tel:+16094235568}{{\footnotesize{\faPhone}} +1 (609) 423-5568} \\ %
+         \href{https://www.rcioffi.com}{{\footnotesize{\faExternalLink}} www.rcioffi.com}} % Your phone number and email
+\address{Department of Economics \\ Julis Romo Rabinowitz Building \\ Princeton University} % 
 
 
 
@@ -79,6 +89,12 @@
 
 
 \begin{document}
+{\footnotesize
+Placement Director: Gianluca Violante \hfill \href{mailto:glv2@princeton.edu}{{\footnotesize{\Letter}} violante@princeton.edu}   \hspace{2mm} \href{tel:+16094235568}{{\footnotesize{\faPhone}} +1 (609) 258-4003} \\
+Graduate Administrator: Laura Hedden \hfill  \href{mailto:lhedden@princeton.edu}{{\footnotesize{\Letter}} lhedden@princeton.edu}  \hspace{2mm} \href{tel:+16094235568}{{\footnotesize{\faPhone}} +1 (609) 258-4006}\\
+}
+\vspace*{-2em}
+
 
 %----------------------------------------------------------------------------------------
 %   EDUCATION SECTION
@@ -87,16 +103,16 @@
 \begin{rSection}{Education}
 
 
-{{\sc \textbf{Ph.D. in Economics}} \hfill {\em 2015 -- Present} 
+{{\sc \textbf{Ph.D. in Economics}} \hfill {\em 2015 -- Present (Expected May 2022)} 
 \\ Princeton University \hfill} \\[0.25ex]
 %
-{{\sc \textbf{M.A. in Economics}} \hfill {\em 2017} 
+{{\sc \textbf{M.A. in Economics}} \hfill {\em 2015 -- 2017} 
 \\ Princeton University \hfill} \\[0.25ex]
 %
-{{\sc \textbf{M.A. in Economics and Finance}} \hfill {\em 2014} 
+{{\sc \textbf{M.A. in Economics and Finance}} \hfill {\em 2012 -- 2014} 
 \\ University of Naples Federico II \hfill} \\[0.25ex]
 %
-{{\sc \textbf{B.A. in Economics}} \hfill {\em 2012} 
+{{\sc \textbf{B.A. in Economics}} \hfill {\em 2009 -- 2012} 
 \\ University of Naples Federico II \hfill}
 
 %Minor in Linguistics \smallskip \\
@@ -106,12 +122,51 @@
 \end{rSection}\vspace*{-1.5ex}
 
 %----------------------------------------------------------------------------------------
+%   Research Interests
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Research Interests}
+
+Macroeconomics, Finance, Household Finance, Inequality
+
+\end{rSection}\vspace*{-1.5ex}
+
+%----------------------------------------------------------------------------------------
+%   REFERENCES
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{References}
+\vspace*{-6ex}
+\begin{multicols}{3}
+\section*{}
+{\sc\textbf{Gianluca Violante}} \newline
+Department of Economics\newline
+Princeton University\newline
+\href{tel:+16094235568}{{\footnotesize{\faPhone}} +1 (609) 258-4003}\newline
+\href{mailto:violante@princeton.edu}{{\footnotesize{\Letter}} violante@princeton.edu}\\
+\section*{}
+{\sc\textbf{Richard Rogerson}}\newline
+Department of Economics\newline
+Princeton University\newline
+\href{tel:+16092584839}{{\footnotesize{\faPhone}} +1 (609) 258-4839}\newline
+\href{mailto:rdr@princeton.edu}{rdr@princeton.edu \Letter}\newline
+\section*{}
+{\sc\textbf{Benjamin Moll}}\newline
+Department of Economics\newline
+London School of Economics\newline
+\href{tel:+442079557507}{{\footnotesize{\faPhone}} +44 20-7955-7507}\newline
+\href{mailto:b.moll@lse.ac.uk}{b.moll@lse.ac.uk \Letter}\newline
+\end{multicols}
+\end{rSection}\vspace{-6ex}
+
+
+%----------------------------------------------------------------------------------------
 %   Working Papers
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Working Papers}
+\begin{rSection}{Job Market Paper}
 
-{\sc \textbf{Heterogeneous Risk Exposure and the Dynamics of Wealth Inequality}}\hfill {\footnotesize \em \textbf{Job Market Paper}} \\[-1.5em]
+{\sc \textbf{Heterogeneous Risk Exposure and the Dynamics of Wealth Inequality}} \\[-1.5em]
 {\begin{abstract}
     \footnotesize 
     In this paper I show that, in the presence of heterogeneous risk exposure along the wealth distribution, aggregate movements in asset returns generate fluctuations in wealth inequality.
@@ -121,13 +176,6 @@
     Finally, I show that fluctuations in asset returns generate large swings in inequality over time that replicate the variation observed in U.S. data.
 \end{abstract}}
 \vspace*{0.5em}
-{{\sc \textbf{Wealth Inequality at the Top: Down to the Roots}} \hfill {\footnotesize \em (joint with G. Sorg-Langhans and M. Vogler)}} \\[-1.5em]
-{\begin{abstract}
-    \footnotesize
-    Multiple theories of inequality compete to explain U.S. wealth inequality and the share of wealth held by the top one percent. To what extent does it matter which of these models we rely on? In this paper we analyze the responses of the different theories to a host of policy experiments. 
-    To this end, we form a quantitative model that nests the competing channels and assesses the effects of policy experiments by sequentially shutting off all but one of these model mechanisms. Our model is directly calibrated on the wealth distribution which allows us to starkly contrast the different theories and clearly understand the mechanisms at work. We find stark differences in predictions across channels for a given policy experiment, indicating that, by choosing a particular mechanism, researchers might already predetermine the outcome of their policy experiments.
-\end{abstract}}
-\vspace*{0.5em}
 
 \end{rSection}\vspace*{-1.5ex}
 
@@ -135,7 +183,7 @@
 % %   Work in progress
 % %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Work in Progress}
+\begin{rSection}{Other Papers}
 
 % {Wealth Inequality and Asset Returns: the Role of Heterogeneous Exposure to Aggregate Risk(s)}\hfill {}
 % {\sc \textbf{The Direct Effect of Wealth on Portfolio Choice: Evidence from Norway}}\hfill {}
@@ -150,19 +198,22 @@
 \end{abstract}}
 \vspace*{0.5em}
 
+\newpage
+
+{{\sc \textbf{Wealth Inequality at the Top: Down to the Roots}} \hfill {\footnotesize \em (joint with G. Sorg-Langhans and M. Vogler)}} \\[-1.5em]
+{\begin{abstract}
+    \footnotesize
+    Multiple theories of inequality compete to explain U.S. wealth inequality and the share of wealth held by the top one percent. To what extent does it matter which of these models we rely on? In this paper we analyze the responses of the different theories to a host of policy experiments. 
+    To this end, we form a quantitative model that nests the competing channels and assesses the effects of policy experiments by sequentially shutting off all but one of these model mechanisms. Our model is directly calibrated on the wealth distribution which allows us to starkly contrast the different theories and clearly understand the mechanisms at work. We find stark differences in predictions across channels for a given policy experiment, indicating that, by choosing a particular mechanism, researchers might already predetermine the outcome of their policy experiments.
+\end{abstract}}
+\vspace*{0.5em}
+
 \end{rSection}\vspace*{-2ex}
 
-%----------------------------------------------------------------------------------------
-%   Research Interests
-%----------------------------------------------------------------------------------------
+\begin{rSection}{Works in Progress} 
+    {The Direct Effect of Wealth on Portfolio Choice: Evidence from Norway}\hfill {}    
+\end{rSection}
 
-\begin{rSection}{Fields}
-
-Macroeconomics, Finance, Household Finance, Inequality
-
-\end{rSection}\vspace*{-1.5ex}
-
-\newpage
 
 %----------------------------------------------------------------------------------------
 %   VISITING SECTION
@@ -171,10 +222,10 @@ Macroeconomics, Finance, Household Finance, Inequality
 \begin{rSection}{Visiting Positions}
 
 {{\sc \textbf{Federal Reserve Board of Governors}} \hfill {\sc \textbf{Washington, DC}}
-\\ Dissertation Fellow (virtual) \hfill {\em Summer 2021}}\\[0.25ex]
+\\ Dissertation Fellow \hfill {\em Summer 2021}}\\[0.25ex]
 %
 {{\sc \textbf{Federal Reserve Bank of St. Louis}} \hfill {\sc \textbf{St. Louis, MO}}
-\\ Dissertation Intern (virtual workshop due to COVID-19) \hfill {\em Summer 2020}}\\[0.25ex]
+\\ Dissertation Intern (workshop due to COVID-19) \hfill {\em Summer 2020}}\\[0.25ex]
 %
 {{\sc \textbf{Statistics Norway}} \hfill {\sc \textbf{Oslo, Norway}}
 \\ Visiting Scholar \hfill {\em 2018 -- Present}}\\[0.25ex]
@@ -191,17 +242,17 @@ Macroeconomics, Finance, Household Finance, Inequality
 %   TEACHING EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Teaching}
+\begin{rSection}{Teaching Experience}
 
 {{\sc \textbf{Graduate -- High Performance Computing in Economics}} \\
-{Sole Instructor} \hfill {\em 2019 -- 2021}} \\[0.25ex]
+{Instructor} \hfill {\em 2019 -- 2021}} \\[0.25ex]
 %
 {{\sc \textbf{Undergraduate -- Intermediate Macroeconomics}} \\
-{T.A. for Gianluca Violante} \hfill {\em Spring 2018}}\\[0.25ex]
+{Teaching Assistant -- Gianluca Violante} \hfill {\em Spring 2018}}\\[0.25ex]
 %
 {{\sc \textbf{Undergraduate -- Introductory Microeconomics}} \\
-{T.A. for Harvey Rosen} \hfill {\em Fall 2018} \\
-{T.A. for Henry Farber} \hfill {\em Fall 2017}}
+{Teaching Assistant -- Harvey Rosen} \hfill {\em Fall 2018} \\
+{Teaching Assistant -- Henry Farber} \hfill {\em Fall 2017}}
 
 \end{rSection}\vspace*{-1.5ex}
 
@@ -209,12 +260,12 @@ Macroeconomics, Finance, Household Finance, Inequality
 %   RESEARCH EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Research Activities} \itemsep - 2pt
+\begin{rSection}{Research Experience} \itemsep - 2pt
 
-{R.A. -- Gianluca Violante} \hfill {\em Princeton University, 2018 -- 2019} \\
-{R.A. -- Benjamin Moll} \hfill {\em Princeton University, 2016 -- 2018} \\
-{R.A. -- Oleg Itskhoki} \hfill {\em Princeton University, 2016} \\
-{R.A. -- Marco Pagano} \hfill {\em University of Naples, 2014 -- 2015}
+{Research Assistant -- Gianluca Violante} \hfill {\em Princeton University, 2018 -- 2019} \\
+{Research Assistant -- Benjamin Moll} \hfill {\em Princeton University, 2016 -- 2018} \\
+{Research Assistant -- Oleg Itskhoki} \hfill {\em Princeton University, 2016} \\
+{Research Assistant -- Marco Pagano} \hfill {\em University of Naples, 2014 -- 2015}
 
 \end{rSection}\vspace*{-1.5ex}
 
@@ -224,8 +275,8 @@ Macroeconomics, Finance, Household Finance, Inequality
 
 \begin{rSection}{Honors and Awards} \itemsep -2pt
 
+{Graduate Fellowship -- Princeton University}\hfill {\em 2015 - 2021} \\
 {Griswold Center for Economy Policy Studies Fellowship -- Princeton University}\hfill {\em 2019 - 2020} \\
-{Graduate Fellowship -- Princeton University}\hfill {\em 2015 - 2019} \\
 {Marco Fanno Scholarship -- UniCredit \& Universities Foundation}\hfill {\em 2014 - 2015} \\
 {``Messaggeri della Conoscenza'' Program Scholarship}\hfill {\em 2015} \\
 {Best Master Student -- University of Naples} \hfill {\em 2014}
@@ -238,7 +289,7 @@ Macroeconomics, Finance, Household Finance, Inequality
 
 \begin{rSection}{Programming Skills}
 
-Julia, R, Matlab, Stata, SAS, \LaTeX
+Julia, R, Matlab, Stata, \LaTeX
 
 \end{rSection}\vspace*{-1.5ex}
 
@@ -253,7 +304,12 @@ Italian (native), English
 
 \end{rSection}\vspace*{-1.5ex}
 
-
+%----------------------------------------------------------------------------------------
+\vspace{1cm}
+\begin{flushright}
+    \footnotesize
+    Last updated: \monthdayyeardate\today
+\end{flushright}
 
 
 
